@@ -5,7 +5,7 @@
 module.exports.files = {
   // Maximum allowed file size in bytes
   // Defaults to 500MB
-  maxBytes: 524288000,
+  maxBytes: process.env['MAX_SIZE_FILE'] || 524288000,
   // The fs directory name at which files will be kept
-  dirname: ''
+  dirname: process.env['PATH_FOR_ASSETS'] || '/tmp/'
 };
