@@ -9,7 +9,7 @@ services:
     depends_on:
       - db
     ports:
-      - '5000:80'
+      - '80:80'
     entrypoint: ./scripts/wait.sh db:5432 -- npm start
 
   db:
