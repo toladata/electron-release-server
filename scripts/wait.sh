@@ -74,6 +74,10 @@ wait_for_wrapper()
     return $RESULT
 }
 
+# Default HOST and PORT
+HOST=$TOLA_DB_HOST
+PORT=$TOLA_DB_PORT
+
 # process arguments
 while [[ $# -gt 0 ]]
 do
@@ -98,7 +102,6 @@ do
         ;;
         -h)
         HOST="$2"
-        if [[ $HOST == "" ]]; then break; fi
         shift 2
         ;;
         --host=*)
@@ -107,7 +110,6 @@ do
         ;;
         -p)
         PORT="$2"
-        if [[ $PORT == "" ]]; then break; fi
         shift 2
         ;;
         --port=*)
